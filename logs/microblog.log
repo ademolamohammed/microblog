@@ -1,0 +1,60 @@
+2019-07-18 09:01:08,252 ERROR: Exception on /user/makavelli [GET] [in c:\users\dell\desktop\microblog\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "c:\users\dell\desktop\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\dell\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\dell\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\dell\desktop\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\dell\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\dell\desktop\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\dell\desktop\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\DELL\Desktop\microblog\app\routes.py", line 76, in user
+    return render_template('user.html', user=user, posts=posts)
+  File "c:\users\dell\desktop\microblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\users\dell\desktop\microblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\users\dell\desktop\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\dell\desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\dell\desktop\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\dell\desktop\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\DELL\Desktop\microblog\app\templates\user.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "C:\Users\DELL\Desktop\microblog\app\templates\base.html", line 32, in top-level template code
+    {% block content %} {% endblock %}
+  File "C:\Users\DELL\Desktop\microblog\app\templates\user.html", line 26, in block "content"
+    {% elif not current_user.following(user) %}
+jinja2.exceptions.UndefinedError: 'app.models.User object' has no attribute 'following'
+2019-07-18 09:02:11,899 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]
+2019-07-19 14:51:28,071 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]
+2019-07-23 04:54:14,397 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]
+2019-07-23 05:34:13,223 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]
+2019-07-23 08:28:04,088 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]
+2019-07-23 08:31:23,689 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]
+2019-07-23 08:31:46,430 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]
+2019-07-23 08:31:56,119 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]
+2019-07-23 08:34:01,480 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]
+2019-07-23 08:37:43,393 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]
+2019-07-23 08:39:38,988 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]
+2019-07-23 08:40:55,568 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]
+2019-07-23 08:42:18,793 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]
+2019-07-23 08:43:40,009 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]
+2019-07-23 08:50:14,109 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]
+2019-07-23 08:51:09,702 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]
+2019-07-23 08:51:28,613 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]
+2019-07-23 08:52:38,201 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]
+2019-07-23 08:56:56,978 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]
+2019-07-23 08:57:20,891 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]
+2019-07-23 08:57:25,100 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]
+2019-07-27 13:35:52,348 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]
+2019-07-27 13:53:41,392 INFO: Microblog startup [in C:\Users\DELL\Desktop\microblog\app\__init__.py:43]

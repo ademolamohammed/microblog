@@ -1,0 +1,20 @@
+{% extend base.html %}
+{% block content %}
+    <h1> Request info</h1>
+    <ul>
+        <li> IP Address: {{request.remote_addr }} </li>
+        <li>  location: {{ client_location.city }} - {{ client_location</li>
+        <li> path: {{request.path }} </li>
+        <li> Query params: {{request.args }} </li>
+        <li> HTTP Meethod: {{ request.method }} </li>
+    </ul>
+    <div>
+        <h2> header </h2>
+        {% for header, value in request.headers %}
+            <p> {{header}}: {{value}}</p>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+
+
