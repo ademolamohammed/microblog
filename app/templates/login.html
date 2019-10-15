@@ -1,33 +1,34 @@
-{% extends 'base.html' %}
-
+{% extends "base.html" %}
 
 {% block content %}
     <h1>Sign In</h1>
-    <form action="" method="post" novalidates>
+    <form action="" method="post" novalidate>
+<!--nonvalidate: imples dt form validatn task is left to the db and not the browser
+    it is optional. we shall use this to test server-side validation
+ -->
         {{ form.hidden_tag() }}
+ <!--
+ generates a hidden field, used to protect against CSRF attack. the variable
+ was defined in the config file. Flask will do the rest.
+ -->
         <p>
-            {{ form.username.label }} <br>
-            {{ form.username(size=32) }} <br>
+            {{ form.username.label }}<br>
+            {{ form.username(size=32) }}<br>
             {% for error in form.username.errors %}
-            <span style="color:red;"> [{{ error }}] </span>
+            <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
-
-
         </p>
-
         <p>
-           {{ form.password.label }} <br>
+            {{ form.password.label }}<br>
             {{ form.password(size=32) }}
-
         </p>
-
-        <p>
-            {{ form.remember_me() }} {{ form.remember_me.label }}
-
-        </p>
-
-        <p> {{ form.submit() }}</p>
-
+        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+        <p>{{ form.submit() }}</p>
     </form>
-  <p>New user? <a href="{{ url_for('register') }}"> sign up</a></p>
+<!-- link to redirect new users to register -->
+    <p>New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>
+    <p>
+        Forgot your password?
+        <a href="{{ url_for('reset_password_request') }}">Click to reset it</a>
+    </p>
 {% endblock %}

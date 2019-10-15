@@ -1,8 +1,22 @@
-{% extends "base.html" %}
+
+{% extends 'base.html' %}
 
 {% block content %}
-<h1> we're sorry something wrong. we are fixing it </h1>
-
-   <a href="{{ url_for('index') }}"> Go back home</a>
-
+    <h1>An unexpected error has occurred</h1>
+    <p>The admin. has been notified. Sorry for the incovenience!</p>
+    <p><a href="{{ url_for('index') }}">Back</a></p>
 {% endblock %}
+
+<!--
+upon installing flask-bootstrap, a bootstrap/base.html template
+becomes available.
+
+bootstrap/base.html will provide the basic structure of the page,
+which includes bootstrap framework files, and provides some blocks
+such as title, navbar and content in the derived templates.
+
+We shall use base.html to derive or inherit from bootstrap/base.html and provide
+implementatns for the title, navbar and content blocks. In this way,
+base.html can export its own app_content block for the derived templates
+to define the page content.
+-->

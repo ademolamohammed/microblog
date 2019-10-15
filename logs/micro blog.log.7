@@ -1,0 +1,99 @@
+2019-07-31 18:46:32,150 ERROR Exception on /explore [GET] [in c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py:(lineno)d]
+Traceback (most recent call last):
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\user\Documents\microblog\app\routes.py", line 228, in explore
+    return render_template('index.html', title='Explore', posts=posts.items)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\user\Documents\microblog\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\user\Documents\microblog\app\templates\base.html", line 36, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Users\user\Documents\microblog\app\templates\index.html", line 22, in block "content"
+    {% include '_post.html' %}
+  File "C:\Users\user\Documents\microblog\app\templates\_post.html", line 4, in top-level template code
+    <td><img src="{{ post.author.avatar(36) }}"></td>
+jinja2.exceptions.UndefinedError: 'None' has no attribute 'avatar'
+2019-07-31 19:29:09,569 INFO Microblog startup [in C:\Users\user\Documents\microblog\app\__init__.py:(lineno)d]
+2019-07-31 20:14:35,669 INFO Microblog startup [in C:\Users\user\Documents\microblog\app\__init__.py:(lineno)d]
+2019-07-31 20:15:04,617 ERROR Exception on /user/bjwealthy [GET] [in c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py:(lineno)d]
+Traceback (most recent call last):
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\user\Documents\microblog\app\routes.py", line 122, in user
+    return render_template('user.html', user=user, posts=posts.item,
+AttributeError: 'Pagination' object has no attribute 'item'
+2019-08-01 13:39:07,191 INFO Microblog startup [in C:\Users\user\Documents\microblog\app\__init__.py:(lineno)d]
+2019-08-03 21:23:49,077 INFO Microblog startup [in C:\Users\user\Documents\microblog\app\__init__.py:(lineno)d]
+2019-08-03 21:24:43,737 INFO Microblog startup [in C:\Users\user\Documents\microblog\app\__init__.py:(lineno)d]
+2019-08-03 21:25:43,747 ERROR Exception on /reset_password_request [GET] [in c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py:(lineno)d]
+Traceback (most recent call last):
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\user\Documents\microblog\app\routes.py", line 268, in reset_password_request
+    return render_template(reset_password_request.html, title-'Reset Password', form=form)
+AttributeError: 'function' object has no attribute 'html'
+2019-08-03 21:27:44,003 INFO Microblog startup [in C:\Users\user\Documents\microblog\app\__init__.py:(lineno)d]
+2019-08-03 21:27:52,492 ERROR Exception on /reset_password_request [GET] [in c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py:(lineno)d]
+Traceback (most recent call last):
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\user\Documents\microblog\app\routes.py", line 268, in reset_password_request
+    return render_template('reset_password_request.html', title-'Reset Password', form=form)
+NameError: name 'title' is not defined
+2019-08-03 21:29:08,261 INFO Microblog startup [in C:\Users\user\Documents\microblog\app\__init__.py:(lineno)d]

@@ -6,6 +6,8 @@ from flask_login import LoginManager
 import logging
 from logging.handlers import  SMTPHandler, RotatingFileHandler
 import os
+from flask_mail import Mail
+from flask_bootstrap import Bootstrap
 
 
 app = Flask(__name__)
@@ -14,6 +16,8 @@ db = SQLAlchemy(app)
 migrate = Migrate(app,db)
 login=LoginManager(app)  #this is for your flaslogin
 login.login_view = 'login'
+mail=Mail(app)
+bootstrap=Bootstrap(app)
 
 from app import routes, models, errors
 
@@ -41,6 +45,27 @@ if not app.debug:
 
     app.logger.setLevel(logging.INFO)
     app.logger.info('Microblog startup')
+
+
+
+
+'''the RotatingFileHandler class used below is cool: it rotates the logs to ensure 
+that the log files the log files don't grow too large when the app runs 
+for a long time. We keep the last 10 log files as backup and limit the size of the 
+log file to 10KB.
+The logging.Formatter class provides custom formatting for the log msges.
+The format used include timestamp, logging level, message and its source, and line 
+number from where the log entry originated.
+We also lower the logging level to the INFO categories(DEBUG, INFO, WARNING, ERROR and CRITICAL) 
+both in the applicatn logger and the logger handler, in increasing order of severity. 
+'''
+
+'''
+In the first use of the log file, the server will write a line to the logs each time it 
+starts. When the applic runs on a prod. server, these log entries will tell u when the 
+server was restarted.
+'''
+
 
 
 

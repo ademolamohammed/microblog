@@ -1,0 +1,134 @@
+2019-08-03 21:55:59,210 ERROR Exception on /reset_password_request [POST] [in c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py:(lineno)d]
+Traceback (most recent call last):
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\user\Documents\microblog\app\routes.py", line 265, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Users\user\Documents\microblog\app\email.py", line 20, in send_password_reset_email
+    user=user, token=token))
+  File "C:\Users\user\Documents\microblog\app\email.py", line 10, in send_email
+    mail.send(msg)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask_mail.py", line 491, in send
+    with self.connect() as connection:
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask_mail.py", line 144, in __enter__
+    self.host = self.configure_host()
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask_mail.py", line 158, in configure_host
+    host = smtplib.SMTP(self.mail.server, self.mail.port)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\smtplib.py", line 336, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\smtplib.py", line 307, in _get_socket
+    self.source_address)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+2019-08-03 21:56:15,828 INFO Microblog startup [in C:\Users\user\Documents\microblog\app\__init__.py:(lineno)d]
+2019-08-03 21:56:24,146 ERROR Exception on /reset_password_request [POST] [in c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py:(lineno)d]
+Traceback (most recent call last):
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\user\Documents\microblog\app\routes.py", line 265, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Users\user\Documents\microblog\app\email.py", line 20, in send_password_reset_email
+    user=user, token=token))
+  File "C:\Users\user\Documents\microblog\app\email.py", line 10, in send_email
+    mail.send(msg)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask_mail.py", line 491, in send
+    with self.connect() as connection:
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask_mail.py", line 144, in __enter__
+    self.host = self.configure_host()
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask_mail.py", line 158, in configure_host
+    host = smtplib.SMTP(self.mail.server, self.mail.port)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\smtplib.py", line 336, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\smtplib.py", line 307, in _get_socket
+    self.source_address)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\socket.py", line 707, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+2019-08-04 16:30:23,493 ERROR Exception on /user/bjwealthy [GET] [in c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py:(lineno)d]
+Traceback (most recent call last):
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\user\Documents\microblog\app\routes.py", line 124, in user
+    return render_template('user.html', user=user, posts=posts.item,
+AttributeError: 'Pagination' object has no attribute 'item'
+2019-08-04 16:31:01,336 ERROR Exception on /user/bjwealthy [GET] [in c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py:(lineno)d]
+Traceback (most recent call last):
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\user\Documents\microblog\app\routes.py", line 124, in user
+    return render_template('user.html', user=user, posts=posts.item,
+AttributeError: 'Pagination' object has no attribute 'item'
+2019-08-04 16:31:33,141 INFO Microblog startup [in C:\Users\user\Documents\microblog\app\__init__.py:(lineno)d]
+2019-08-04 16:31:38,491 ERROR Exception on /user/bjwealthy [GET] [in c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py:(lineno)d]
+Traceback (most recent call last):
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\user\documents\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\user\Documents\microblog\app\routes.py", line 124, in user
+    return render_template('user.html', user=user, posts=posts.item,
+AttributeError: 'Pagination' object has no attribute 'item'
+2019-08-04 16:35:25,772 INFO Microblog startup [in C:\Users\user\Documents\microblog\app\__init__.py:(lineno)d]
